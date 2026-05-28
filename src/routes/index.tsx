@@ -30,7 +30,7 @@ const PRODUCTS: Product[] = [
     id: "projetor",
     name: "Mini Projetor Portátil LED 1080p HDMI - 600 Lumens",
     price: 297.0,
-    image: "/products/projetor.png",
+    image: "/products/projetor.webp",
     link: "https://pay.kaiross.com.br/mhfD7gQvpjLe",
     badge: "TELÃO DA COPA",
     desc: "Transforme sua sala no maior estádio da vizinhança. Tela de até 60 polegadas, HDMI, USB e som embutido. Testado antes do envio.",
@@ -39,7 +39,7 @@ const PRODUCTS: Product[] = [
     id: "kit-torcedor",
     name: "Kit Torcedor Brasil Copa 2026 - 12 Peças",
     price: 89.0,
-    image: "/products/kit-torcedor.png",
+    image: "/products/kit-torcedor.webp",
     link: "https://pay.kaiross.com.br/IWFJeZhVIJ8C",
     badge: "MAIS VENDIDO",
     desc: "Kit completo com 12 itens: bandeira 90x150, corneta, óculos, pulseira, lenço, bastões infláveis, fogos, pintura facial e mais.",
@@ -48,7 +48,7 @@ const PRODUCTS: Product[] = [
     id: "bandeira-grande",
     name: "Bandeira do Brasil Gigante 1,50m x 0,90m",
     price: 49.9,
-    image: "/products/bandeira-grande.png",
+    image: "/products/bandeira-grande.webp",
     link: "https://pay.kaiross.com.br/M26EORs0nd8p",
     desc: "100% poliéster, cores vibrantes, costura reforçada. Perfeita para mastros, fachadas e dias de jogo.",
   },
@@ -56,7 +56,7 @@ const PRODUCTS: Product[] = [
     id: "varal",
     name: "Varal de 20 Bandeirinhas Brasil 6 Metros",
     price: 29.9,
-    image: "/products/varal-bandeirinhas.png",
+    image: "/products/varal-bandeirinhas.webp",
     link: "https://pay.kaiross.com.br/N5wrgJ7A9wtL",
     badge: "CLÁSSICO",
     desc: "6 metros, 20 bandeiras impressas frente e verso. Decoração instantânea para sua casa, rua ou comércio.",
@@ -65,7 +65,7 @@ const PRODUCTS: Product[] = [
     id: "bandeira-carro",
     name: "Bandeira do Brasil para Vidro de Carro",
     price: 27.9,
-    image: "/products/bandeira-carro.png",
+    image: "/products/bandeira-carro.webp",
     link: "https://pay.kaiross.com.br/W1ktRRKnNK9Z",
     desc: "Poliéster resistente, haste reforçada, estampa dupla face. Leve o Brasil para a rua nos dias de jogo.",
   },
@@ -73,7 +73,7 @@ const PRODUCTS: Product[] = [
     id: "corneta",
     name: "Corneta Brasil Barulhenta - Torcedor",
     price: 24.9,
-    image: "/products/corneta.png",
+    image: "/products/corneta.webp",
     link: "https://pay.kaiross.com.br/G3uCUl71Mg94",
     desc: "Som potente, plástico rígido nas cores oficiais. Cores sortidas (verde e amarelo).",
   },
@@ -81,7 +81,7 @@ const PRODUCTS: Product[] = [
     id: "copo-verde",
     name: "Copo Térmico CBF Verde - Aço Inox 473ml",
     price: 69.9,
-    image: "/products/copo-verde.png",
+    image: "/products/copo-verde.webp",
     link: "https://pay.kaiross.com.br/wJPz0UCAErbA",
     desc: "Parede dupla com isolamento a vácuo. Mantém quente ou gelado por horas. Estampa CBF + BRASIL.",
   },
@@ -89,7 +89,7 @@ const PRODUCTS: Product[] = [
     id: "copo-azul",
     name: "Copo Térmico CBF Azul Marinho - Aço Inox 473ml",
     price: 69.9,
-    image: "/products/copo-azul.png",
+    image: "/products/copo-azul.webp",
     link: "https://pay.kaiross.com.br/Fq2oIsQQ7qnx",
     desc: "Parede dupla com isolamento a vácuo. Mantém quente ou gelado por horas. Estampa CBF + BRASIL.",
   },
@@ -97,7 +97,7 @@ const PRODUCTS: Product[] = [
     id: "copo-amarelo",
     name: "Copo Térmico CBF Amarelo - Aço Inox 473ml",
     price: 69.9,
-    image: "/products/copo-amarelo.png",
+    image: "/products/copo-amarelo.webp",
     link: "https://pay.kaiross.com.br/S6mychWCAsFx",
     desc: "Parede dupla com isolamento a vácuo. Mantém quente ou gelado por horas. Estampa CBF + BRASIL.",
   },
@@ -105,7 +105,7 @@ const PRODUCTS: Product[] = [
     id: "album",
     name: "Álbum Copa do Mundo FIFA 2026 - Panini",
     price: 79.9,
-    image: "/products/album.png",
+    image: "/products/album.webp",
     link: "https://pay.kaiross.com.br/O5j1Q6dp7M9B",
     desc: "Livro ilustrado oficial Panini. 112 páginas + capa, formato 232x270mm. (Figurinhas não inclusas)",
   },
@@ -113,7 +113,7 @@ const PRODUCTS: Product[] = [
     id: "album-10",
     name: "Álbum FIFA 2026 + 10 Envelopes de Figurinhas",
     price: 159.9,
-    image: "/products/album-10.png",
+    image: "/products/album-10.webp",
     link: "https://pay.kaiross.com.br/lNk0pSpCI46Q",
     badge: "COMBO",
     desc: "Álbum oficial Panini + 10 envelopes (70 figurinhas). Comece sua coleção da Copa agora.",
@@ -122,7 +122,7 @@ const PRODUCTS: Product[] = [
     id: "album-20",
     name: "Álbum FIFA 2026 + 20 Envelopes de Figurinhas",
     price: 249.9,
-    image: "/products/album-20.png",
+    image: "/products/album-20.webp",
     link: "https://pay.kaiross.com.br/bp70EH62udNe",
     badge: "COMBO TOP",
     desc: "Álbum oficial Panini + 20 envelopes (140 figurinhas). O combo definitivo do colecionador.",
@@ -131,7 +131,7 @@ const PRODUCTS: Product[] = [
     id: "envelope",
     name: "Envelope de Figurinhas FIFA 2026 - 1 Unidade",
     price: 15.98,
-    image: "/products/envelope.png",
+    image: "/products/envelope.webp",
     link: "https://pay.kaiross.com.br/0yv5wWjL3SVr",
     desc: "1 envelope oficial Panini com 7 cromos para colar no seu álbum da Copa 2026.",
   },
@@ -139,7 +139,7 @@ const PRODUCTS: Product[] = [
     id: "pisca",
     name: "Pisca Pisca 100 LEDs Branco Quente 10m - 110V",
     price: 34.9,
-    image: "/products/pisca-pisca.png",
+    image: "/products/pisca-pisca.webp",
     link: "https://pay.kaiross.com.br/JP1IArQbrySJ",
     desc: "Cordão LED branco quente, 10 metros, múltiplos efeitos. Decoração aconchegante para festas.",
   },
@@ -147,7 +147,7 @@ const PRODUCTS: Product[] = [
     id: "cortina-led",
     name: "Cortina de LED RGB Multicolor 300 Luzes 3x3m - USB",
     price: 79.9,
-    image: "/products/cortina-led.png",
+    image: "/products/cortina-led.webp",
     link: "https://pay.kaiross.com.br/iQ5EfVNU1uIM",
     badge: "NOVO",
     desc: "300 LEDs multicoloridos, 3x3 metros, alimentação USB/bivolt. Transforme qualquer ambiente.",
@@ -156,7 +156,7 @@ const PRODUCTS: Product[] = [
 
 const BANNERS = [
   {
-    image: "/banners/banner-projetor.jpg",
+    image: "/banners/banner-projetor.webp",
     eyebrow: "NOVIDADE • TELÃO EM CASA",
     title: "ASSISTA À COPA EM TELÃO DE 60\"",
     sub: "Mini Projetor 1080p HDMI por apenas R$297 — chame a galera e viva cada gol como se fosse no estádio.",
@@ -164,7 +164,7 @@ const BANNERS = [
     target: "projetor",
   },
   {
-    image: "/banners/banner-torcida.jpg",
+    image: "/banners/banner-torcida.webp",
     eyebrow: "FALTAM POUCOS DIAS",
     title: "VISTA O VERDE E AMARELO",
     sub: "Kit torcedor, bandeiras e copos CBF com envio para todo o Brasil. Garanta antes que esgote.",
@@ -172,7 +172,7 @@ const BANNERS = [
     target: "produtos",
   },
   {
-    image: "/banners/banner-rua.jpg",
+    image: "/banners/banner-rua.webp",
     eyebrow: "DECORE SUA RUA",
     title: "VARAL DE BANDEIRAS 6 METROS",
     sub: "Transforme sua casa, rua ou comércio em um reduto da Seleção a partir de R$29,90.",
@@ -185,6 +185,7 @@ function Index() {
   const [bannerIdx, setBannerIdx] = useState(0);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setInterval(() => setBannerIdx((i) => (i + 1) % BANNERS.length), 4500);
     return () => clearInterval(t);
   }, []);
@@ -224,7 +225,7 @@ function Index() {
 
       {/* Banner rotativo */}
       <section className="relative overflow-hidden bg-black">
-        <div className="relative mx-auto h-[420px] max-w-7xl md:h-[520px]">
+        <div className="relative mx-auto h-[340px] max-w-7xl sm:h-[420px] md:h-[520px]">
           {BANNERS.map((b, i) => (
             <div
               key={i}
@@ -235,24 +236,28 @@ function Index() {
               <img
                 src={b.image}
                 alt={b.title}
+                width={1600}
+                height={900}
+                decoding="async"
+                fetchPriority={i === 0 ? "high" : "low"}
                 className="absolute inset-0 h-full w-full object-cover"
                 loading={i === 0 ? "eager" : "lazy"}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
               <div className="absolute inset-0 flex items-center">
-                <div className="max-w-2xl px-6 md:px-12">
+                <div className="max-w-2xl px-4 sm:px-6 md:px-12">
                   <span className="inline-block rounded-full bg-[#FFDF00] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#002776] shadow-lg md:text-xs">
                     {b.eyebrow}
                   </span>
-                  <h2 className="mt-4 text-3xl font-black leading-tight text-white drop-shadow-2xl md:text-5xl lg:text-6xl">
+                  <h2 className="mt-3 text-2xl font-black leading-tight text-white drop-shadow-2xl sm:text-3xl md:text-5xl lg:text-6xl">
                     {b.title}
                   </h2>
-                  <p className="mt-3 max-w-xl text-sm font-medium text-white/90 drop-shadow md:text-lg">
+                  <p className="mt-2 max-w-xl text-xs font-medium text-white/90 drop-shadow sm:text-sm md:text-lg">
                     {b.sub}
                   </p>
                   <button
                     onClick={() => scrollTo(b.target)}
-                    className="mt-6 rounded-full bg-[#FFDF00] px-8 py-3 text-sm font-black uppercase text-[#002776] shadow-xl transition hover:scale-105 hover:bg-yellow-300 md:text-base"
+                    className="mt-4 rounded-full bg-[#FFDF00] px-6 py-3 text-xs font-black uppercase text-[#002776] shadow-xl transition active:scale-95 hover:scale-105 hover:bg-yellow-300 sm:mt-6 sm:px-8 sm:text-sm md:text-base"
                   >
                     {b.cta} →
                   </button>
@@ -333,11 +338,12 @@ function Index() {
           </div>
           <div className="relative">
             <img
-              src="/banners/banner-projetor.jpg"
+              src="/banners/banner-projetor.webp"
               alt="Família assistindo à Copa do Mundo em um telão projetado na parede"
               width={1920}
               height={1080}
               loading="lazy"
+              decoding="async"
               className="aspect-video w-full rounded-3xl object-cover shadow-2xl ring-4 ring-[#FFDF00]/40"
             />
             <div className="absolute -bottom-4 -right-4 rounded-2xl bg-[#FFDF00] px-4 py-2 text-xs font-black uppercase text-[#002776] shadow-xl md:text-sm">
@@ -408,6 +414,9 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={product.image}
           alt={product.name}
+          width={400}
+          height={400}
+          decoding="async"
           loading="lazy"
           className="h-full w-full object-contain p-4 transition group-hover:scale-105"
         />
