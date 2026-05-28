@@ -95,7 +95,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         "data-utmify-prevent-xcod-sck": "",
         "data-utmify-prevent-subids": "",
       },
-ало,
     ],
   }),
   shellComponent: RootShell,
