@@ -71,20 +71,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Brasil na Copa 2026 | Loja Oficial do Torcedor" },
-      { name: "description", content: "Produtos oficiais para torcer pelo Brasil na Copa do Mundo 2026. Bandeiras, kits, copos CBF, álbuns Panini e muito mais." },
-      { name: "author", content: "Brasil Copa Store" },
-      { property: "og:title", content: "Brasil na Copa 2026 | Loja do Torcedor" },
-      { property: "og:description", content: "Vista o verde e amarelo. Bandeiras, kits, copos CBF, álbuns e acessórios para a Copa 2026." },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "theme-color", content: "#009C3B" },
+      { title: "Fanáticos Copa | Loja Oficial do Torcedor 2026" },
+      { name: "description", content: "Bandeiras, kits torcedor, copos CBF, álbuns Panini, projetor e acessórios para a Copa do Mundo 2026. Envio para todo o Brasil." },
+      { name: "author", content: "Fanáticos Copa" },
+      { property: "og:title", content: "Fanáticos Copa | Loja do Torcedor 2026" },
+      { property: "og:description", content: "Vista o verde e amarelo. Bandeiras, kits, copos CBF, álbuns e projetor para a Copa 2026." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@fanaticoscopa" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "preload",
+        as: "image",
+        href: "/banners/banner-projetor.webp",
+        fetchpriority: "high",
       },
     ],
     scripts: [
@@ -105,7 +112,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
         <script
