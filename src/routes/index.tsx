@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Brasil na Copa 2026 | Loja Oficial do Torcedor" },
+      { title: "Fanáticos Copa | Loja Oficial do Torcedor 2026" },
       {
         name: "description",
         content:
-          "Bandeiras, kits torcedor, copos CBF, álbuns Panini e acessórios oficiais para a Copa do Mundo 2026. Entrega para todo o Brasil.",
+          "Bandeiras, kits torcedor, copos CBF, álbuns Panini, projetor e acessórios oficiais para a Copa do Mundo 2026. Entrega para todo o Brasil.",
       },
     ],
   }),
@@ -26,6 +26,15 @@ type Product = {
 };
 
 const PRODUCTS: Product[] = [
+  {
+    id: "projetor",
+    name: "Mini Projetor Portátil LED 1080p HDMI - 600 Lumens",
+    price: 297.0,
+    image: "/products/projetor.png",
+    link: "https://pay.kaiross.com.br/mhfD7gQvpjLe",
+    badge: "TELÃO DA COPA",
+    desc: "Transforme sua sala no maior estádio da vizinhança. Tela de até 60 polegadas, HDMI, USB e som embutido. Testado antes do envio.",
+  },
   {
     id: "kit-torcedor",
     name: "Kit Torcedor Brasil Copa 2026 - 12 Peças",
@@ -147,19 +156,28 @@ const PRODUCTS: Product[] = [
 
 const BANNERS = [
   {
-    title: "FALTAM POUCOS DIAS PARA A COPA 2026",
-    sub: "Garanta seus acessórios oficiais antes que esgote",
+    image: "/banners/banner-projetor.jpg",
+    eyebrow: "NOVIDADE • TELÃO EM CASA",
+    title: "ASSISTA À COPA EM TELÃO DE 60\"",
+    sub: "Mini Projetor 1080p HDMI por apenas R$297 — chame a galera e viva cada gol como se fosse no estádio.",
+    cta: "Quero meu telão",
+    target: "projetor",
+  },
+  {
+    image: "/banners/banner-torcida.jpg",
+    eyebrow: "FALTAM POUCOS DIAS",
+    title: "VISTA O VERDE E AMARELO",
+    sub: "Kit torcedor, bandeiras e copos CBF com envio para todo o Brasil. Garanta antes que esgote.",
     cta: "Ver produtos",
+    target: "produtos",
   },
   {
-    title: "FRETE PARA TODO O BRASIL",
-    sub: "Envios diários • Pague no Pix, cartão ou boleto",
+    image: "/banners/banner-rua.jpg",
+    eyebrow: "DECORE SUA RUA",
+    title: "VARAL DE BANDEIRAS 6 METROS",
+    sub: "Transforme sua casa, rua ou comércio em um reduto da Seleção a partir de R$29,90.",
     cta: "Comprar agora",
-  },
-  {
-    title: "KIT TORCEDOR 12 PEÇAS POR R$89",
-    sub: "Tudo o que você precisa para vibrar com a Seleção",
-    cta: "Quero meu kit",
+    target: "produtos",
   },
 ];
 
@@ -175,6 +193,10 @@ function Index() {
     document.getElementById("produtos")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen bg-[#fffdf5] text-neutral-900">
       {/* Header */}
@@ -182,10 +204,10 @@ function Index() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFDF00] text-xl">
-              ⚽
+              🇧🇷
             </div>
             <div>
-              <h1 className="text-lg font-black leading-tight">BRASIL NA COPA</h1>
+              <h1 className="text-lg font-black leading-tight">FANÁTICOS COPA</h1>
               <p className="text-[10px] font-semibold uppercase tracking-wider text-[#FFDF00]">
                 Loja do Torcedor 2026
               </p>
@@ -201,39 +223,50 @@ function Index() {
       </header>
 
       {/* Banner rotativo */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#009C3B] via-[#00A93E] to-[#007a2e]">
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: "radial-gradient(circle at 20% 50%, #FFDF00 0%, transparent 40%), radial-gradient(circle at 80% 30%, #002776 0%, transparent 40%)",
-        }} />
-        <div className="relative mx-auto max-w-7xl px-4 py-10 md:py-14">
-          <div className="flex min-h-[140px] flex-col items-center justify-center text-center">
-            {BANNERS.map((b, i) => (
-              <div
-                key={i}
-                className={`absolute inset-0 flex flex-col items-center justify-center px-4 transition-all duration-700 ${
-                  i === bannerIdx ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
-                }`}
-              >
-                <h2 className="text-2xl font-black text-white drop-shadow-lg md:text-4xl">
-                  {b.title}
-                </h2>
-                <p className="mt-2 text-sm font-medium text-[#FFDF00] md:text-base">{b.sub}</p>
-                <button
-                  onClick={scrollToProducts}
-                  className="mt-4 rounded-full bg-[#FFDF00] px-6 py-2 text-sm font-black uppercase text-[#002776] shadow-lg transition hover:scale-105"
-                >
-                  {b.cta}
-                </button>
+      <section className="relative overflow-hidden bg-black">
+        <div className="relative mx-auto h-[420px] max-w-7xl md:h-[520px]">
+          {BANNERS.map((b, i) => (
+            <div
+              key={i}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                i === bannerIdx ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+            >
+              <img
+                src={b.image}
+                alt={b.title}
+                className="absolute inset-0 h-full w-full object-cover"
+                loading={i === 0 ? "eager" : "lazy"}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
+              <div className="absolute inset-0 flex items-center">
+                <div className="max-w-2xl px-6 md:px-12">
+                  <span className="inline-block rounded-full bg-[#FFDF00] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#002776] shadow-lg md:text-xs">
+                    {b.eyebrow}
+                  </span>
+                  <h2 className="mt-4 text-3xl font-black leading-tight text-white drop-shadow-2xl md:text-5xl lg:text-6xl">
+                    {b.title}
+                  </h2>
+                  <p className="mt-3 max-w-xl text-sm font-medium text-white/90 drop-shadow md:text-lg">
+                    {b.sub}
+                  </p>
+                  <button
+                    onClick={() => scrollTo(b.target)}
+                    className="mt-6 rounded-full bg-[#FFDF00] px-8 py-3 text-sm font-black uppercase text-[#002776] shadow-xl transition hover:scale-105 hover:bg-yellow-300 md:text-base"
+                  >
+                    {b.cta} →
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
-          <div className="relative mt-4 flex justify-center gap-2">
+            </div>
+          ))}
+          <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2">
             {BANNERS.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setBannerIdx(i)}
                 className={`h-2 rounded-full transition-all ${
-                  i === bannerIdx ? "w-8 bg-[#FFDF00]" : "w-2 bg-white/50"
+                  i === bannerIdx ? "w-10 bg-[#FFDF00]" : "w-2 bg-white/60"
                 }`}
                 aria-label={`Banner ${i + 1}`}
               />
@@ -249,6 +282,68 @@ function Index() {
           <div>📦 Enviamos para todo Brasil</div>
           <div>🔒 Compra 100% Segura</div>
           <div>⚡ Envio Rápido</div>
+        </div>
+      </section>
+
+      {/* Storytelling — Projetor */}
+      <section id="projetor" className="relative overflow-hidden bg-gradient-to-br from-[#001a4d] via-[#002776] to-[#001033] py-14 text-white md:py-20">
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: "radial-gradient(circle at 80% 20%, #FFDF00 0%, transparent 35%), radial-gradient(circle at 10% 90%, #009C3B 0%, transparent 40%)",
+        }} />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2">
+          <div>
+            <span className="inline-block rounded-full bg-[#FFDF00] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#002776]">
+              O telão oficial da sua casa
+            </span>
+            <h2 className="mt-4 text-3xl font-black leading-tight md:text-5xl">
+              IMAGINA O <span className="text-[#FFDF00]">GOL DO BRASIL</span><br/>
+              EM UMA TELA DE <span className="text-[#00E676]">60 POLEGADAS</span>
+            </h2>
+            <p className="mt-4 text-base text-white/90 md:text-lg">
+              Esquece a TV pequena da sala. Com o <strong>Mini Projetor Portátil 1080p</strong>,
+              você transforma qualquer parede branca no maior telão da vizinhança.
+              Chama os amigos, abre a cerveja gelada, joga a bandeira na parede — e
+              vive cada lance da Copa como se estivesse dentro do Maracanã.
+            </p>
+            <ul className="mt-6 space-y-2 text-sm md:text-base">
+              <li className="flex items-start gap-2"><span className="text-[#FFDF00]">⚡</span> HDMI, USB, AV e cartão SD — conecta TV Box, PS, notebook e celular</li>
+              <li className="flex items-start gap-2"><span className="text-[#FFDF00]">🔊</span> Alto-falante embutido — som potente sem precisar de caixa extra</li>
+              <li className="flex items-start gap-2"><span className="text-[#FFDF00]">📺</span> Projeção de 24" até 60" — escolhe o tamanho do seu estádio</li>
+              <li className="flex items-start gap-2"><span className="text-[#FFDF00]">💡</span> 30.000 horas de LED — vai durar muito além de 2026</li>
+              <li className="flex items-start gap-2"><span className="text-[#FFDF00]">✅</span> Testado antes do envio + controle remoto incluso</li>
+            </ul>
+            <div className="mt-6 flex flex-wrap items-end gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-wider text-white/60">Por apenas</p>
+                <p className="text-4xl font-black text-[#FFDF00] md:text-5xl">R$ 297<span className="text-2xl">,00</span></p>
+                <p className="text-xs text-white/80">ou 3x de R$ 99,00 sem juros</p>
+              </div>
+              <a
+                href="https://pay.kaiross.com.br/mhfD7gQvpjLe"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const search = typeof window !== "undefined" ? window.location.search : "";
+                  window.location.href = "https://pay.kaiross.com.br/mhfD7gQvpjLe" + search;
+                }}
+                className="rounded-full bg-gradient-to-r from-[#FFDF00] to-[#FFB800] px-8 py-4 text-sm font-black uppercase text-[#002776] shadow-xl transition hover:scale-105 md:text-base"
+              >
+                Quero meu telão da Copa →
+              </a>
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src="/banners/banner-projetor.jpg"
+              alt="Família assistindo à Copa do Mundo em um telão projetado na parede"
+              width={1920}
+              height={1080}
+              loading="lazy"
+              className="aspect-video w-full rounded-3xl object-cover shadow-2xl ring-4 ring-[#FFDF00]/40"
+            />
+            <div className="absolute -bottom-4 -right-4 rounded-2xl bg-[#FFDF00] px-4 py-2 text-xs font-black uppercase text-[#002776] shadow-xl md:text-sm">
+              Tela até 60"
+            </div>
+          </div>
         </div>
       </section>
 
@@ -274,7 +369,7 @@ function Index() {
       {/* Footer */}
       <footer className="mt-12 border-t-4 border-[#FFDF00] bg-[#002776] py-8 text-center text-white">
         <div className="mx-auto max-w-7xl px-4">
-          <h3 className="text-lg font-black">BRASIL NA COPA 2026</h3>
+          <h3 className="text-lg font-black">FANÁTICOS COPA 2026</h3>
           <p className="mt-1 text-xs text-[#FFDF00]">Loja oficial do torcedor brasileiro</p>
           <p className="mt-4 text-[11px] text-white/70">
             Compra processada de forma segura via Kaiross Pay. Frete calculado no checkout.
