@@ -76,11 +76,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Fanáticos Copa | Loja Oficial do Torcedor 2026" },
       { name: "description", content: "Bandeiras, kits torcedor, copos CBF, álbuns Panini, projetor e acessórios para a Copa do Mundo 2026. Envio para todo o Brasil." },
       { name: "author", content: "Fanáticos Copa" },
-      { property: "og:title", content: "Fanáticos Copa | Loja do Torcedor 2026" },
-      { property: "og:description", content: "Vista o verde e amarelo. Bandeiras, kits, copos CBF, álbuns e projetor para a Copa 2026." },
+      { property: "og:title", content: "Fanáticos Copa | Loja Oficial do Torcedor 2026" },
+      { property: "og:description", content: "Bandeiras, kits torcedor, copos CBF, álbuns Panini, projetor e acessórios para a Copa do Mundo 2026. Envio para todo o Brasil." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@fanaticoscopa" },
+      { name: "twitter:title", content: "Fanáticos Copa | Loja Oficial do Torcedor 2026" },
+      { name: "twitter:description", content: "Bandeiras, kits torcedor, copos CBF, álbuns Panini, projetor e acessórios para a Copa do Mundo 2026. Envio para todo o Brasil." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/257ffcca-e9e6-41f0-b9e2-f8bdb7701f7b/id-preview-7a46f5d8--37decc3c-532f-4051-bead-c51874339b64.lovable.app-1779936174737.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/257ffcca-e9e6-41f0-b9e2-f8bdb7701f7b/id-preview-7a46f5d8--37decc3c-532f-4051-bead-c51874339b64.lovable.app-1779936174737.png" },
     ],
     links: [
       {
