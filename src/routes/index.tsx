@@ -343,6 +343,7 @@ function Index() {
               width={1920}
               height={1080}
               loading="lazy"
+              decoding="async"
               className="aspect-video w-full rounded-3xl object-cover shadow-2xl ring-4 ring-[#FFDF00]/40"
             />
             <div className="absolute -bottom-4 -right-4 rounded-2xl bg-[#FFDF00] px-4 py-2 text-xs font-black uppercase text-[#002776] shadow-xl md:text-sm">
