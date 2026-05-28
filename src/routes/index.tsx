@@ -185,6 +185,7 @@ function Index() {
   const [bannerIdx, setBannerIdx] = useState(0);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setInterval(() => setBannerIdx((i) => (i + 1) % BANNERS.length), 4500);
     return () => clearInterval(t);
   }, []);
@@ -224,7 +225,7 @@ function Index() {
 
       {/* Banner rotativo */}
       <section className="relative overflow-hidden bg-black">
-        <div className="relative mx-auto h-[420px] max-w-7xl md:h-[520px]">
+        <div className="relative mx-auto h-[340px] max-w-7xl sm:h-[420px] md:h-[520px]">
           {BANNERS.map((b, i) => (
             <div
               key={i}
@@ -235,24 +236,28 @@ function Index() {
               <img
                 src={b.image}
                 alt={b.title}
+                width={1600}
+                height={900}
+                decoding="async"
+                fetchPriority={i === 0 ? "high" : "low"}
                 className="absolute inset-0 h-full w-full object-cover"
                 loading={i === 0 ? "eager" : "lazy"}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
               <div className="absolute inset-0 flex items-center">
-                <div className="max-w-2xl px-6 md:px-12">
+                <div className="max-w-2xl px-4 sm:px-6 md:px-12">
                   <span className="inline-block rounded-full bg-[#FFDF00] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#002776] shadow-lg md:text-xs">
                     {b.eyebrow}
                   </span>
-                  <h2 className="mt-4 text-3xl font-black leading-tight text-white drop-shadow-2xl md:text-5xl lg:text-6xl">
+                  <h2 className="mt-3 text-2xl font-black leading-tight text-white drop-shadow-2xl sm:text-3xl md:text-5xl lg:text-6xl">
                     {b.title}
                   </h2>
-                  <p className="mt-3 max-w-xl text-sm font-medium text-white/90 drop-shadow md:text-lg">
+                  <p className="mt-2 max-w-xl text-xs font-medium text-white/90 drop-shadow sm:text-sm md:text-lg">
                     {b.sub}
                   </p>
                   <button
                     onClick={() => scrollTo(b.target)}
-                    className="mt-6 rounded-full bg-[#FFDF00] px-8 py-3 text-sm font-black uppercase text-[#002776] shadow-xl transition hover:scale-105 hover:bg-yellow-300 md:text-base"
+                    className="mt-4 rounded-full bg-[#FFDF00] px-6 py-3 text-xs font-black uppercase text-[#002776] shadow-xl transition active:scale-95 hover:scale-105 hover:bg-yellow-300 sm:mt-6 sm:px-8 sm:text-sm md:text-base"
                   >
                     {b.cta} →
                   </button>
@@ -408,6 +413,9 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={product.image}
           alt={product.name}
+          width={400}
+          height={400}
+          decoding="async"
           loading="lazy"
           className="h-full w-full object-contain p-4 transition group-hover:scale-105"
         />
